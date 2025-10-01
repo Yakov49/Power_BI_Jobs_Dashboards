@@ -1,6 +1,6 @@
 # Data Jobs Dashboard (Power BI)
 
-![Dashboard](IMAGE)
+![Dashboard](project_image.JPG)
 
 ## Introduction
 A single-page Power BI report analysing **data-job postings** (roles, skills, pay).  
