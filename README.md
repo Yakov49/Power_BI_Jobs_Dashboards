@@ -50,10 +50,26 @@ MEDIAN ( job_postings_fact[salary_year_avg] )
 Median Hourly Salary =
 MEDIAN ( job_postings_fact[salary_hour_adjusted_v2] )
 
--- Fallback example (if one salary field is blank)
+Fallback example (if one salary field is blank)
 Final Salary =
 IF (
     NOT ISBLANK ( job_postings_fact[salary_year_avg] ),
     job_postings_fact[salary_year_avg],
     job_postings_fact[salary_hour_adjusted_v2]
 )
+```
+---
+
+## Conclusion
+This dashboard converts raw job-posting data into a **clear, interactive overview** with:
+- **KPI cards** for market size (Job Count), skills density, and typical pay.
+- **Bar charts** for **Skill Popularity** and **Job Salaries**, with a parameter toggle for **Median Yearly / Median Hourly** salary.
+- **Slicers** (Job Title, Country) and a **Clear Slicers** action for quick resets.
+
+The build intentionally uses a **lightweight model** and a few **transparent measures** to keep the report
+fast, readable, and portfolio-friendly. It’s a solid base to extend with:
+- Drill-through pages per role,
+- Geographic breakdowns,
+- Normalised salary indices across countries,
+- Documented Power Query steps for full reproducibility.
+
